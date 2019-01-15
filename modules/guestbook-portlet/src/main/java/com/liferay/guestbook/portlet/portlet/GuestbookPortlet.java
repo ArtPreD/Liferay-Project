@@ -104,7 +104,6 @@ public class GuestbookPortlet extends MVCPortlet {
 		if (entryId > 0) {
 
 			try {
-
 				_entryLocalService.updateEntry(
 						serviceContext.getUserId(), guestbookId, entryId, userName,
 						email, message, serviceContext);
@@ -136,7 +135,6 @@ public class GuestbookPortlet extends MVCPortlet {
 
 				response.setRenderParameter(
 						"guestbookId", Long.toString(guestbookId));
-
 			} catch (Exception e) {
 				SessionErrors.add(request, e.getClass().getName());
 
@@ -156,14 +154,15 @@ public class GuestbookPortlet extends MVCPortlet {
 				Entry.class.getName(), request);
 
 		try {
-
 			response.setRenderParameter(
 					"guestbookId", Long.toString(guestbookId));
 
 			_entryLocalService.deleteEntry(entryId, serviceContext);
+			SessionMessages.add(request, "entryDeleted");
 		} catch (Exception e) {
 			Logger.getLogger(GuestbookPortlet.class.getName()).log(
 					Level.SEVERE, null, e);
+			SessionErrors.add(request, e.getClass().getName());
 		}
 	}
 }
