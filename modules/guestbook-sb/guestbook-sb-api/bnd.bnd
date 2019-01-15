@@ -1,0 +1,9 @@
+Bundle-Name: guestbook-sb-api
+Bundle-SymbolicName: com.liferay.guestbook.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.guestbook.exception,\
+	com.liferay.guestbook.model,\
+	com.liferay.guestbook.service,\
+	com.liferay.guestbook.service.persistence
+-includeresource: META-INF/service.xml=../guestbook-sb-service/service.xml
