@@ -59,6 +59,12 @@
 			<artifactId>guestbook-sb-api</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.liferay.guestbook</groupId>
+			<artifactId>guestbook-sb-service</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

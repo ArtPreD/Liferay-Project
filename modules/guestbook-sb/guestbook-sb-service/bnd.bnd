@@ -7,3 +7,4 @@ Liferay-Service: true
 -liferay-service-xml: META-INF/service.xml
 -plugin.service: com.liferay.ant.bnd.service.ServiceAnalyzerPlugin
 -plugin.spring: com.liferay.ant.bnd.spring.SpringDependencyAnalyzerPlugin
+Export-Package: com.liferay.guestbook.permission

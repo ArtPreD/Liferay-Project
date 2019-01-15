@@ -20,6 +20,12 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@ page import="com.liferay.guestbook.service.GuestbookLocalServiceUtil" %>
 <%@ page import="com.liferay.guestbook.model.Entry" %>
 
+<%@ page import="com.liferay.guestbook.permission.GuestbookModelPermission" %>
+<%@ page import="com.liferay.guestbook.permission.GuestbookPermission" %>
+<%@ page import="com.liferay.guestbook.permission.EntryPermission" %>
+<%@ page import="com.liferay.portal.kernel.util.WebKeys" %>
+<%@ page import="com.liferay.portal.kernel.security.permission.ActionKeys" %>
+
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />
